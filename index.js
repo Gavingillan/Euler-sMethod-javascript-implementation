@@ -19,7 +19,7 @@ function startApp(){
         x=parseInt(result.InitialX);
         y=parseInt(result.InitialY);
         deltaX=parseFloat(result.DeltaX);
-        Iterations = parseInt(result.Ending_X_Value)/deltaX;
+        Iterations = parseFloat(result.Ending_X_Value)-x)/deltaX;
         main();
         startApp();
     });
@@ -28,7 +28,7 @@ function startApp(){
 function main(){
     scope.deltaX = deltaX;
 
-    console.log('first point: (' + x + ',' + y + ')');
+    console.log('point 1: (' + x + ',' + y + ')');
 
     for(var i=0;i<Iterations;i++){
         scope.x= x;
@@ -40,9 +40,12 @@ function main(){
         scope.newX=newX;
         var newY= evaluate(scope.slope*(newX-x)+y,scope)
 
+        deltaY = newY-y;
+
         x=newX;
         y=newY;
-        console.log("point " + (i+2) + ": (" + x + ',' + y + ')' );
+        
+        console.log("point " + (i+2) + ": (" + x + ',' + y + ')' + "  deltaY: " + deltaY);
     }
 }
 
