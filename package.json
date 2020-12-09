@@ -1,0 +1,16 @@
+{
+  "name": "eulermethod",
+  "bin": "./bin",
+  "version": "1.0.0",
+  "description": "A short program to do Eulers Method for integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Gavin Gillan",
+  "license": "MIT",
+  "dependencies": {
+    "mathjs": "^8.1.0",
+    "prompt": "^1.0.0"
+  }
+}
