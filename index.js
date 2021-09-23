@@ -19,7 +19,7 @@ function startApp(){
         x=parseInt(result.InitialX);
         y=parseInt(result.InitialY);
         deltaX=parseFloat(result.DeltaX);
-        Iterations = parseFloat(result.Ending_X_Value)-x)/deltaX;
+        Iterations = (parseFloat(result.Ending_X_Value)-x)/deltaX;
         main();
         startApp();
     });
