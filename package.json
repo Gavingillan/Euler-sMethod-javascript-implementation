@@ -10,7 +10,7 @@
   "author": "Gavin Gillan",
   "license": "MIT",
   "dependencies": {
-    "mathjs": "^8.1.0",
+    "mathjs": "^8.1.1",
     "prompt": "^1.0.0"
   }
 }
